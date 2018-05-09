@@ -1,0 +1,27 @@
+{
+  "name": "start_boilerplate",
+  "version": "1.0.0",
+  "description": "Start boilerplate",
+  "main": "app/dist/index.html",
+  "scripts": {
+    "test": "echo \"Hello World\" && exit 1"
+  },
+  "author": "A-Ostrovnyy",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0"
+  }
+}

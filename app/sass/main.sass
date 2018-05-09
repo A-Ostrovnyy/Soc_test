@@ -1,0 +1,250 @@
+@import "fonts"
+@import "libs"
+@import "base"
+@import "vars"
+
+.container
+    padding: 40px
+.heading
+    text-transform: uppercase
+    color: $accent-brown
+    font-weight: bold
+    font-size: 14px
+    margin-bottom: 50px
+
+.promo_img
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    box-sizing: border-box
+    overflow: hidden
+    max-height: 1300px
+
+    &:hover > img
+        transition: all .45s ease-out
+        transform: scale(30)
+        opacity: .65
+
+.promo_dot
+    opacity: .65
+    position: absolute
+    animation-name: promo
+    animation-duration: 10s 
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    animation-play-state: running
+
+.text-center
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+.promo_info
+    padding: 150px 0 
+    padding-left: 100px
+    
+.counter
+    text-align: center
+    color: $accent-red
+    background-image: url(../img/2535.png)
+    background-repeat: no-repeat
+    background-position: bottom right
+    margin-bottom: 110px
+    animation-name: counter
+    animation-duration: 10s 
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    animation-play-state: running
+
+.head
+    text-transform: uppercase
+    font-size: 16px
+    font-weight: 600
+    letter-spacing: 3px
+    margin-bottom: 35px
+
+    &::after
+        content: ''
+        width: 2px
+        height: 40px
+        background-color: $accent-red
+        display: block
+        margin: 0 auto
+        margin-top: 35px
+
+.count
+    font-size: 78px
+    line-height: 78px
+    font-weight: bold
+    font-style: italic
+    margin-bottom: 25px
+    display: block
+
+.promo_text
+    margin: 0 auto
+    max-width: 400px
+    color: #000
+    font-weight: 700
+
+.select_wraper
+    position: relative
+
+    &::before
+        content: ''
+        width: 10px
+        height: 10px
+        border: 10px solid transparent
+        border-right: 10px solid $accent-brown
+        border-bottom: 10px solid $accent-brown
+        position: absolute
+        z-index: 1
+        top: 44px
+        right: 0
+
+    &:hover::before
+        border-right: 10px solid #ccc
+        border-bottom: 10px solid #ccc
+
+.form_label
+    color: #ccc
+    margin-bottom: 0
+
+.form_select
+    font-weight: bold
+    padding-left: 0
+    margin-bottom: 50px
+    border: none
+    border-bottom: 1px solid $accent-brown
+    cursor: pointer
+    appearance: none
+    padding-right: 20px
+
+.form_select:hover
+    border-color: #ccc
+
+select:focus, select:active
+    outline-color: #fff
+    
+.custom-select
+    background-image: none
+.service
+    padding: 35px
+
+    & > .heading
+        font-size: 30px
+        color: $accent-red
+        letter-spacing: 5px
+        position: relative
+        margin-bottom: 15px
+
+        &::before
+            content: ''
+            display: block
+            width: 200px
+            height: 2px
+            background-color: $accent-red
+            opacity: .65
+            position: absolute
+            top: 46%
+            left: -30%
+
+.service_text
+    font-size: 12px
+    font-weight: 700
+
+.stylist_head
+    width: 100%
+    border-bottom: 2px solid $accent-brown
+    cursor: pointer
+    text-transform: uppercase
+
+
+.stylist_data
+    font-weight: 700
+    text-align: center
+    & th 
+        font-weight: 400
+    & th:first-child,
+    & td:first-child
+        text-align: left
+
+.hidden
+    display: none
+
+.button
+    background-color: transparent
+    box-shadow: none
+    text-transform: uppercase
+    padding: 15px 50px
+    letter-spacing: 2px
+    cursor: pointer
+    border: 2px solid #000
+    margin-right: 15px
+    margin-top: 30px
+
+    &:hover
+        border-color: transparent
+        position: relative
+        transition: all .3s ease-out
+        color: $accent-red
+
+        &::after, 
+        &::before
+            content: ''
+            display: block
+            width: 40px
+            height: 2px
+            background-color: $accent-brown
+            position: absolute
+
+        &::after
+            position: absolute
+            top: 27px
+            left: -35px
+
+        &::before
+            bottom: 27px
+            right: -35px
+    
+    &:focus,
+    &:active 
+        color: $accent-brown    
+
+
+@keyframes promo
+    from
+        bottom: 2%
+        right: 1%
+    20% 
+        bottom: 10%
+        right: 5%
+    40%
+        bottom: 8%
+        right: 3%
+    60% 
+        bottom: 8%
+        right: 8%
+    80% 
+        bottom: 4%
+        right: 5%
+    100% 
+        bottom: 2%
+        right: 1%
+
+
+
+
+@keyframes counter
+    from
+        background-position: 92% 85%
+    20% 
+        background-position: 96% 96%
+    40%
+        background-position: 99% 80%
+    60% 
+        background-position: 85% 96%
+    80% 
+        background-position: 92% 90%
+    100% 
+        background-position: 92% 85%
+
+@import "media" // Всегда в конце
